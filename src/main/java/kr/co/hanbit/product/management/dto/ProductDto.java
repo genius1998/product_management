@@ -4,6 +4,15 @@ import jakarta.validation.constraints.NotNull;
 
 public class ProductDto {
 
+    public ProductDto() {
+    }
+
+    public ProductDto(String name, Integer price, Integer amount) {
+        this.name = name;
+        this.price = price;
+        this.amount = amount;
+    }
+
     private Long id;
     private String name;
     private Integer price;
