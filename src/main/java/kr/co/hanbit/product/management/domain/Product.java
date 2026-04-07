@@ -67,4 +67,14 @@ public class Product {
         Product product = (Product) o;
         return Objects.equals(id, product.id);
     }
+
+    public Product (){
+
+    }
+    public Product (Long id, String name, Integer price, Integer amount) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.amount = amount;
+    }
 }

@@ -5,8 +5,6 @@ import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
-import org.modelmapper.ModelMapper;
-import org.modelmapper.config.Configuration;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,14 +16,14 @@ public class Application {
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}
-    @Bean
-    public ModelMapper modelMapper() {
-        ModelMapper modelMapper = new ModelMapper();
-        modelMapper.getConfiguration()
-                .setFieldAccessLevel(Configuration.AccessLevel.PRIVATE)
-                .setFieldMatchingEnabled(true);
-        return modelMapper;
-    }
+//    @Bean
+//    public ModelMapper modelMapper() {
+//        ModelMapper modelMapper = new ModelMapper();
+//        modelMapper.getConfiguration()
+//                .setFieldAccessLevel(Configuration.AccessLevel.PRIVATE)
+//                .setFieldMatchingEnabled(true);
+//        return modelMapper;
+//    }
 
     @Bean
     public ApplicationRunner runner(DataSource dataSource) {
